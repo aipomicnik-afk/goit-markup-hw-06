@@ -1,0 +1,226 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999999999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 250ms ease-in-out;
+}
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+}
+.modal-container {
+    width: 288px;
+    max-height: 624px;
+    background-color: #fcfcfc;
+    overflow: auto;
+    padding: 0 24px 24px 24px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 
+    0 2px 1px 0 rgba(0, 0, 0, 0.2),
+    0 1px 3px 0  rgba(0, 0, 0, 0.12),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+.modal-form {
+    color: #8E8F99;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+}
+.modal-close {
+    position: absolute;
+    right:24px;
+    top:24px;
+    display: block;
+    background-color: #E7E9FC;
+    border: solid rgba(46, 47, 66, 0.4) 1px;
+    cursor: pointer;
+    line-height: 0;
+    padding: 8px;
+    border-radius: 24px;
+    fill: #2E2F42;
+    transition-property: border, background-color, fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+/* убирать лайн-хейдт  и шрифт для кнопок!!! */
+.modal-close:focus, .modal-close:hover {
+    background-color: #404BBF;
+    fill: #FFFFFF;
+    border: solid #404BBF 1px;
+}
+.modal-title {
+    margin-top: 72px;
+    text-align: center;
+    color: #2E2F42;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+.input-wrap{
+    margin-bottom: 8px;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.04em;
+    line-height: 1.17;
+}
+/* block для линейного елемента */
+.name-input {
+    margin-bottom: 8px;
+}
+
+.input-svg-wrap {
+    position: relative;
+}
+.form-icon {
+    position: absolute;
+    fill: #2E2F42;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-property: fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.input-text {
+    display: block;  
+    width: 100%;
+    border-radius: 4px;
+    height: 40px;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    padding-left: 38px;
+    border: solid 1px rgba(46, 47, 66, 0.4);
+    transition-property: border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+.input-text:focus {
+    outline: none;
+    border: solid 1px #4D5AE5;
+}
+.input-text:focus + .form-icon {
+    fill: #4D5AE5;
+}
+.textarea-text {
+    display: block;
+    resize: none;   
+    width: 100%;
+    border-radius: 4px;
+    height: 40px;
+    border-radius: 4px;
+    height: 120px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border: solid 1px rgba(46, 47, 66, 0.4);
+   transition-property: border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+.textarea-text::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
+.textarea-text:hover, .textarea-text:focus {
+    outline: none;
+    border-color: #4d5ae5;
+}
+/* .check-wrap {
+    margin-bottom: 24px;
+} */
+.label-checked {
+    display: flex;
+    align-items: baseline;
+}
+.chekbox-icon {
+    fill: #F4F4FD;
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.native-chekbox:checked + .label-checked > .custom-chekbox .chekbox-icon {
+    opacity: 1;
+}
+.native-chekbox:checked + .label-checked > .custom-chekbox {
+    background-color: #404BBF;
+    fill: #F4F4FD;
+}
+.custom-chekbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: rgba(46, 47, 66, 0.4) solid 1px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.checkbox-text {
+    width: 100%;
+    letter-spacing: 0.04em;
+}
+.chekbox-link {
+    line-height: 1.333;
+    text-decoration: underline;
+    color: #4D5AE5;
+    letter-spacing: 0.04em;
+}
+
+.modal-btn-submit {
+    display: block;
+    padding: 16px 65px;
+    width: 169px;
+    height: 56px;
+    background-color: #4D5AE5;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    margin-top: 24px;
+    font-weight: 500; 
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+.modal-btn-submit:hover, .modal-btn-submit:focus {
+    background-color: #404BBF;
+}
+
+
+@media screen and (min-width: 768px) {
+    .modal-container {
+        width: 408px;
+        max-height: 584px;
+    }
+}

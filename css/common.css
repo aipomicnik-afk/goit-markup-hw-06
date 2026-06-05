@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} 
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color:#434455;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    background-color: #fff;
+    margin: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding-left: 0;
+
+}
+/* відсутність крапок у списках */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* убрати для поислання підкреслення */
+button {
+    font-family: inherit;
+}
+/* кнопки не наслідують стилі від боді */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+/* object-fit:cover для зображення, щоб воно зайняло розміри контейнера із збереженням своїх пропорцій */
+/* display прибирає пробіли у вигляді залишку font-size між картинками */
+/* max-width визначає підлаштування всього зображення по ширині батьківського блоку */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* прибирає стандартні відступи знизу зверху між текстовими елементами*/
+.container {
+    max-width: 288px; 
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+    .section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 736px;
+    }
+}
+
+/* dekstop */
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+}
+}
+
+.sr-only {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  margin: -1px;
+}

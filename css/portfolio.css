@@ -1,0 +1,98 @@
+.portfolio-title {
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.111;
+    color: #2e2f42;
+    margin-bottom: 72px;
+}
+.portfolio-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 72px;
+}
+.portfolio-item {
+    max-width: 288px;
+    position: relative;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-item img {
+    object-fit: cover;
+}
+.portfolio-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.overley-wrap {
+    background-color: #4D5AE5;
+    color: #F4F4FD;
+    line-height: 1.5;
+    padding: 40px 32px;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover .portfolio-image-wrapper .overley-wrap {
+   transform: translateY(0);
+}
+.portfolio-list-wrap {
+    padding: 32px 16px;
+    border-bottom: 1px solid #E7E9FC;
+    border-left: 1px solid #E7E9FC;
+    border-right: 1px solid #E7E9FC;
+} 
+.portfolio-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    color: #2E2F42;
+    line-height: 1.2;
+    margin-bottom: 8px;
+
+}
+
+.portfolio-text {
+    line-height: 1.5;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {  
+    .portfolio-list{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+    .portfolio-item {
+        width: calc((100% - 24px) /2);
+    }
+    /* ПРОБЛЕМА в помещении картинок если использовать макс ширину вместо кальк*/
+}
+
+@media screen and (min-width: 1158px) {
+    .portfolio-list{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+    
+    .portfolio-item {
+        max-width: 360px;
+    }
+}
