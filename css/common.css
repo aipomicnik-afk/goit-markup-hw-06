@@ -44,21 +44,35 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 /* прибирає стандартні відступи знизу зверху між текстовими елементами*/
 .container {
-    max-width: 288px; 
-    max-width: 1158px;
+    max-width: 320px; 
+    /* max-width: 288px; 
+    max-width: 1158px; */
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
 }
-    .section {
+.section {
     padding-top: 96px;
     padding-bottom: 96px;
+}
+.sr-only {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  margin: -1px;
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 736px;
+        /* max-width: 736px; */
+        max-width: 768px;
     }
 }
 
@@ -73,17 +87,4 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
         padding-top: 120px;
         padding-bottom: 120px;
 }
-}
-
-.sr-only {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  margin: -1px;
 }

@@ -43,32 +43,17 @@
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 
     0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
+.header-container {
+    justify-content: flex-start;
+}
     .navigation {
-        display: block;
+    display: block;
     font-weight: 500;
     line-height: 1.5;
     flex-grow: 1;
 }
-.nav-list {
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 40px;
-}
-    .contacts {
-    display: block;
-    font-weight: 400;
-    line-height: 1.5;
-    font-style: normal;
-    color: #434455;
-}
     .header-container .logo {
     padding-right: 120px;
-}
-.contact-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 12px;
 }
 .nav-list {
     display: flex;
@@ -110,7 +95,20 @@
     left: 0;
     bottom: 0;
 }
+    .contacts {
+    display: block;
+}
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+}
 .contact-mail, .contact-tel {
+    font-weight: 400;
+    line-height: 1.5;
+    font-style: normal;
+    letter-spacing: 0.04em;
     color: #434455;
     transition-property: color;
     transition-duration: 250ms;
