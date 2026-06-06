@@ -78,6 +78,7 @@
         column-gap: 24px;
     }
     .portfolio-item {
+        max-width: 356px;
         width: calc((100% - 24px) /2);
     }
     /* ПРОБЛЕМА в помещении картинок если использовать макс ширину вместо кальк*/
@@ -94,5 +95,6 @@
     
     .portfolio-item {
         max-width: 360px;
+        width: calc((100% - 48px) /3);
     }
 }
