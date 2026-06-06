@@ -28,41 +28,41 @@
         column-gap: 24px;
         flex-direction: row;
         flex-wrap: wrap;
-}
-.features-list-item {
-    width: calc((100% - 24px) / 2);
-}
+    }
+    .features-list-item {
+        width: calc((100% - 24px) / 2);
+    }
     .features-list-subtitle {
         text-align: start;
-}
+    }
 }
 
 
 /* Dekstop */
 @media screen and (min-width: 1158px) {
-.features-list {
+    .features-list {
         column-gap: 24px;
         flex-direction: row;
-}   
-.features-list-item {
-    width: calc((100% - 72px)/4);
-}
-.features-icon-container{
-    background-color: #F4F4FD;
-    height: 112px;
-    border-radius: 4px;
-    border: 1px solid #8E8F99;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-}
-.features-list-subtitle {
-    margin-top: 8px;
-    font-weight: 500;
-    line-height: 1.2;
-    font-size: 20px;
-}
-.features-list-text {
-    font-weight: 400;  
-}
+    }   
+    .features-list-item {
+        width: calc((100% - 72px)/4);
+    }
+    .features-icon-container{
+        background-color: #F4F4FD;
+        height: 112px;
+        border-radius: 4px;
+        border: 1px solid #8E8F99;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    .features-list-subtitle {
+        margin-top: 8px;
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 20px;
+    }
+    .features-list-text {
+        font-weight: 400;  
+    }
 }

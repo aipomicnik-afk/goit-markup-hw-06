@@ -89,6 +89,6 @@
         column-gap: 24px;
     }
     .team-list-item {
-   flex-shrink: 0;
-}
+        flex-shrink: 0;
+    }
 }

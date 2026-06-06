@@ -143,9 +143,6 @@
     outline: none;
     border-color: #4d5ae5;
 }
-/* .check-wrap {
-    margin-bottom: 24px;
-} */
 .label-checked {
     display: flex;
     align-items: baseline;
